@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SettingController;
 
@@ -32,6 +33,8 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+
+    Route::get('/',[Controller::class,'index'])->name('index');
     Route::get('/msg', [ContactController::class, 'msg'])->name('msg');
     Route::get('/msg/detail/{id}', [ContactController::class, 'msgdetail'])->name('msg.detail');
     Route::get('/msg/delete/{id}', [ContactController::class, 'msgdelete'])->name('msg.delete');

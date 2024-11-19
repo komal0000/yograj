@@ -9,7 +9,7 @@
         @foreach ($posts as $post)
         <div class="col-md-4">
             <div class="post mb-4 shadow p-2"> <!-- Added shadow class for shadow effect -->
-                <div class="img" style="width: 100%; height:300px; overflow: hidden;">
+                <div class="img" style="width: 100%; height:500px; overflow: hidden;">
                     <img src="{{ asset('images/' . $post->image) }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Blog Post Image" class="img-fluid mb-3">
                 </div>
 

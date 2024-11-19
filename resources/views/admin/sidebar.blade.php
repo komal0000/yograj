@@ -1,5 +1,5 @@
 <div class="sidebar" id="sidebar">
-    <h2>{{Auth::user()->name}}</h2>
+    <h2>{{strtoupper(Auth::user()->name)}}</h2>
     <ul>
         <li><a href="{{ route('admin.posts.index') }}"><i class="fas fa-edit"></i>Posts</a></li>
         <li><a href="{{ route('admin.settings.index') }}"><i class="fas fa-gear"></i>Settings</a></li>

@@ -91,7 +91,7 @@
                 <div class="">
                     <h4 aria-label="breadcrumb ">
                         <ol class="breadcrumb bg-light py-3 ps-2">
-                            <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+                            <li class="breadcrumb-item"><a style="text-decoration: none; color:#575A5E; font-weight: 700;" href="/admin">Admin</a></li>
                             @yield('jumbo')
                         </ol>
                     </h4>
