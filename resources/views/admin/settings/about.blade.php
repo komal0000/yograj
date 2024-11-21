@@ -55,6 +55,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const addSkillBtn = document.getElementById("addSkillBtn");
             const skillsContainer = document.getElementById("skillsContainer");
+
             addSkillBtn.addEventListener("click", function () {
                 const newSkillGroup = document.createElement("div");
                 newSkillGroup.classList.add("form-group", "col-md-3");
