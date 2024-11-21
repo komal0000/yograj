@@ -50,15 +50,31 @@
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("addSkillBtn").addEventListener("click", function () {
-                var newSkillInput = document.querySelector(".skillInput").cloneNode(true);
-                newSkillInput.value = '';
-                document.getElementById("skillsContainer").appendChild(newSkillInput);
-            });
+            const addSkillBtn = document.getElementById("addSkillBtn");
+            const skillsContainer = document.getElementById("skillsContainer");
+            addSkillBtn.addEventListener("click", function () {
+                const newSkillGroup = document.createElement("div");
+                newSkillGroup.classList.add("form-group", "col-md-3");
 
-            var deleteButtons = document.querySelectorAll(".deleteSkillBtn");
+                newSkillGroup.innerHTML = `
+                    <label for="skillInput">Skill</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control skillInput" placeholder="Enter skill" name="skills[]" value="">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-danger deleteSkillBtn">Delete</button>
+                        </div>
+                    </div>
+                `;
+                skillsContainer.appendChild(newSkillGroup);
+                const deleteBtn = newSkillGroup.querySelector(".deleteSkillBtn");
+                deleteBtn.addEventListener("click", function () {
+                    newSkillGroup.remove();
+                });
+            });
+            const deleteButtons = document.querySelectorAll(".deleteSkillBtn");
             deleteButtons.forEach(function (button) {
                 button.addEventListener("click", function () {
                     this.closest('.form-group').remove();
