@@ -1,7 +1,7 @@
 <header>
 <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <div class="logo">
                         <h1>AB<span style="color: #FF8976;">CD</span></h1>
                     </div>

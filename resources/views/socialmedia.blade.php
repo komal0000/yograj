@@ -75,6 +75,17 @@
     .twitter-card {
         border-top: 5px solid #1da1f2;
     }
+
+    /* Reduce gaps between cards */
+    .row.g-2 > [class*="col-"] {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 576px) {
+        .row.g-2 > [class*="col-"] {
+            margin-bottom: 8px;
+        }
+    }
 </style>
 
 @section('title', 'Social Media')
@@ -91,23 +102,23 @@
         </div>
 
         <!-- Unique Layout -->
-        <div class="row g-4">
+        <div class="row g-2">
             <!-- Left Block -->
-            <div class="col-md-4 d-flex align-items-center">
+            <div class="col-md-3 d-flex align-items-center">
                 <div>
                     <h2 class="mb-4" style="font-size: 2rem; color: #6C63FF;">Connect with Me</h2>
                     <p class="text-muted mb-4" style="font-size: 1rem;">
                         Discover the stories, tips, and conversations that inspire and engage my audience across platforms.
                     </p>
-                    <a href="#" class="btn btn-primary btn-lg" style="border-radius: 30px;">Explore All Platforms</a>
+                    <a href="#" class="btn btn-primary btn-lg" style="pointer-events: none; border-radius: 30px;">Explore All Platforms</a>
                 </div>
             </div>
 
             <!-- Right Block - Social Media Cards -->
-            <div class="col-md-8">
-                <div class="row g-4">
+            <div class="col-md-9">
+                <div class="row g-2">
                     <!-- YouTube Card -->
-                    <div class="col-sm-6">
+                    <div class="col-md-3">
                         <div class="card custom-card youtube-card">
                             <div class="card-body text-center">
                                 <img src="Images/youtube.png" alt="YouTube" class="platform-icon">
@@ -119,7 +130,7 @@
                     </div>
 
                     <!-- Facebook Card -->
-                    <div class="col-sm-6">
+                    <div class="col-md-3">
                         <div class="card custom-card facebook-card">
                             <div class="card-body text-center">
                                 <img src="Images/facebook.png" alt="Facebook" class="platform-icon">
@@ -131,7 +142,7 @@
                     </div>
 
                     <!-- Instagram Card -->
-                    <div class="col-sm-6">
+                    <div class="col-md-3">
                         <div class="card custom-card instagram-card">
                             <div class="card-body text-center">
                                 <img src="Images/instagram.png" alt="Instagram" class="platform-icon">
@@ -143,7 +154,7 @@
                     </div>
 
                     <!-- Twitter Card -->
-                    <div class="col-sm-6">
+                    <div class="col-md-3">
                         <div class="card custom-card twitter-card">
                             <div class="card-body text-center">
                                 <img src="Images/twitter.png" alt="Twitter" class="platform-icon">
@@ -158,6 +169,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection

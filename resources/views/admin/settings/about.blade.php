@@ -47,7 +47,9 @@
             <div class="form-group col-md-3 mt-2" id="addSkillBtnContainer">
                 <button type="button" class="btn btn-success mt-4" id="addSkillBtn">Add Skill</button>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
         </form>
     </div>
 
