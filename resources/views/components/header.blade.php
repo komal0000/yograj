@@ -1,5 +1,5 @@
 <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('main') }}">
                 <h1 class="mb-0 text-white">
