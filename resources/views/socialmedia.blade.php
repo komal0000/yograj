@@ -5,7 +5,7 @@
     }
 
     .social-media {
-        background-color: white
+        background-color: white;
     }
 
     .platform-icon {
@@ -83,6 +83,41 @@
     .linkedin-card {
         border-top: 5px solid #0077b5;
     }
+
+    /* Mobile Responsive Styling */
+    @media (max-width: 767px) {
+        .platform-title {
+            font-size: 1.2rem;
+        }
+
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .custom-card {
+            margin-bottom: 20px;
+        }
+
+        .social-media .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .social-media .row {
+            flex-direction: column;
+        }
+
+        .col-md-3, .col-md-9 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .col-6 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
 </style>
 
 <section class="social-media py-5">
@@ -112,7 +147,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <!-- YouTube Card -->
-                    <div class="col-6">
+                    <div class="col-6 col-md-4">
                         <div class="card custom-card youtube-card">
                             <div class="card-body text-center">
                                 <img src="Images/youtube.png" alt="YouTube" class="platform-icon">
@@ -123,7 +158,7 @@
                     </div>
 
                     <!-- Facebook Card -->
-                    <div class="col-6">
+                    <div class="col-6 col-md-4">
                         <div class="card custom-card facebook-card">
                             <div class="card-body text-center">
                                 <img src="Images/facebook.png" alt="Facebook" class="platform-icon">
@@ -134,7 +169,7 @@
                     </div>
 
                     <!-- Instagram Card -->
-                    <div class="col-6">
+                    <div class="col-6 col-md-4">
                         <div class="card custom-card instagram-card">
                             <div class="card-body text-center">
                                 <img src="Images/instagram.png" alt="Instagram" class="platform-icon">
@@ -145,7 +180,7 @@
                     </div>
 
                     <!-- Twitter Card -->
-                    <div class="col-6">
+                    <div class="col-6 col-md-4">
                         <div class="card custom-card twitter-card">
                             <div class="card-body text-center">
                                 <img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.jpg" alt="Twitter" class="platform-icon">
@@ -156,7 +191,7 @@
                     </div>
 
                     <!-- LinkedIn Card -->
-                    <div class="col-6">
+                    <div class="col-6 col-md-4">
                         <div class="card custom-card linkedin-card">
                             <div class="card-body text-center">
                                 <img src="Images/li.png" alt="LinkedIn" class="platform-icon">
