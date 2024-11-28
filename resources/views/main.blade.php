@@ -4,8 +4,12 @@
         html {
             scroll-behavior: smooth;
         }
+        section {
+            scroll-margin-top: 72px;
+        }
     </style>
 @endsection
+
 @section('content')
     <section id="home-section">
         @include('home')
@@ -19,7 +23,4 @@
         @include('socialmedia')
     </section>
 
-    <section id="blog-section">
-        @include('home')
-    </section>
 @endsection
