@@ -1,8 +1,4 @@
-@extends('app')
-@section('title', 'Portfolio')
-@section('content')
-
-<div class="main py-5" style="background-color: #f9f9f9;">
+<div class="main py-5">
     @php
         $data = App\Helper::getHomeSetting();
     @endphp
@@ -21,9 +17,9 @@
                     <p style="font-size: 1.2rem; color: #666; line-height: 1.8;">
                         {!! $data->paragraph2 !!}
                     </p>
-                    <a href="#" class="btn btn-success btn-lg mt-3" style="border-radius: 30px;">
+                    {{-- <a href="#" class="btn btn-success btn-lg mt-3" style="border-radius: 30px;">
                         {!! $data->button_text !!}
-                    </a>
+                    </a> --}}
                     <!-- Statistics -->
                     <div class="d-flex mt-4 gap-4 stats-container">
                         <div>
@@ -45,7 +41,8 @@
             <!-- Image Content -->
             <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-xs-12 order-0 order-md-1 p-0">
                 <div class="image-content text-center">
-                    <img src="{{ asset($data->image) }}" alt="Portfolio Image" class="img-fluid rounded" style="max-width: 70%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                    <img src="{{ asset($data->image) }}" alt="Portfolio Image" class="img-fluid rounded"
+                        style="max-width: 55%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
         </div>
@@ -54,7 +51,7 @@
 
 <style>
     .main {
-        background: linear-gradient(135deg, #e0eaff, #f9f9f9);
+        background-color: white
     }
 
     .text-content h1 {
@@ -82,5 +79,3 @@
         color: #888;
     }
 </style>
-
-@endsection

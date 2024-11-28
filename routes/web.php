@@ -10,8 +10,8 @@ use App\Http\Controllers\SettingController;
 
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('main');
+})->name('main');
 
 Route::get('/about', function () {
     return view('about');

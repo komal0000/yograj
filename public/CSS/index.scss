@@ -77,17 +77,12 @@ body{
     }
 
         .main{
-            background-color: #E7F5FE;
-
-
             .first-div{
                 flex:6;
                 align-items: center;
                 display: block;
                 justify-content: space-around;
                 padding: 20px 30px 20px 30px;
-
-
                 h1{
                     text-transform: capitalize;
                     font-size: 60px;
@@ -96,8 +91,6 @@ body{
                 p{
                     text-align: justify;
                 }
-
-
                 .hire{
                     color: #ffffff;
                     background-color: #252729;
@@ -118,8 +111,6 @@ body{
                 .color-heading{
                     color:#FF8976;
                 }
-
-
                 .datas{
                         display: flex;
                         flex-direction: row;
@@ -140,13 +131,7 @@ body{
 
                     }
 
-
-
             }
-
-
-
-
             .second-div{
                 width:70%;
                 overflow: hidden;
@@ -163,14 +148,8 @@ body{
 
         }
 
-
-
-
-
-
         .about-section {
             padding: 10px 150px;
-
             #section-heading {
                 font-size: 40px;
                 padding: 10px 5px 5px 5px;
@@ -253,9 +232,7 @@ body{
 
 
     .social-media{
-        background-color: #E7F5FE;
         padding: 40px 80px 40px 70px;
-
         #section-heading{
 
             font-size: 40px;
@@ -267,7 +244,6 @@ body{
         .card{
                 background-color: #FFFFFF;
                 border-radius: 15px;
-                width:60%;
                 padding: 10px;
                 margin: 10px;
 

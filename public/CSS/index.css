@@ -52,9 +52,6 @@ body header .navbar .container-fluid .contact:hover {
   background-color: #FF8976;
   color: white;
 }
-body .main {
-  background-color: #E7F5FE;
-}
 body .main .first-div {
   flex: 6;
   align-items: center;
@@ -174,7 +171,6 @@ body .about-section .skills li .fa-check-circle {
   color: #FF8976;
 }
 body .social-media {
-  background-color: #E7F5FE;
   padding: 40px 80px 40px 70px;
 }
 body .social-media #section-heading {
@@ -185,9 +181,8 @@ body .social-media #section-heading {
 body .social-media .card {
   background-color: #FFFFFF;
   border-radius: 15px;
-  width: 60%;
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
 }
 body .social-media .card .card-img-top {
   background-color: #D4C3C2;

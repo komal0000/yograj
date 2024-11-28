@@ -1,4 +1,3 @@
-@extends('app')
 <style>
     /* General Styling */
     body {
@@ -6,7 +5,7 @@
     }
 
     .social-media {
-        background: linear-gradient(135deg, #f4f4f9, #e0eaff);
+        background-color: white
     }
 
     .platform-icon {
@@ -75,23 +74,8 @@
     .twitter-card {
         border-top: 5px solid #1da1f2;
     }
-
-    /* Reduce gaps between cards */
-    .row.g-2 > [class*="col-"] {
-        margin-bottom: 10px;
-    }
-
-    @media (max-width: 576px) {
-        .row.g-2 > [class*="col-"] {
-            margin-bottom: 8px;
-        }
-    }
 </style>
-
-@section('title', 'Social Media')
-@section('content')
-
-<section class="social-media py-5">
+<section class="social-media  py-5">
     <div class="container">
         <!-- Section Heading -->
         <div class="text-center mb-5">
@@ -102,7 +86,7 @@
         </div>
 
         <!-- Unique Layout -->
-        <div class="row g-2">
+        <div class="row ">
             <!-- Left Block -->
             <div class="col-md-3 d-flex align-items-center">
                 <div>
@@ -116,7 +100,7 @@
 
             <!-- Right Block - Social Media Cards -->
             <div class="col-md-9">
-                <div class="row g-2">
+                <div class="row">
                     <!-- YouTube Card -->
                     <div class="col-md-3">
                         <div class="card custom-card youtube-card">
@@ -169,5 +153,3 @@
         </div>
     </div>
 </section>
-
-@endsection
