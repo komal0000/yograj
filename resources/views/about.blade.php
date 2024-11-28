@@ -9,12 +9,11 @@
                 A snapshot of my story, skills, and how to reach me.
             </p>
         </div>
-        <div class="row align-items-center mb-5">
-
+        <div class="row mb-5">
             <div class="col-md-3 text-center">
                 <div class="about-img">
                     <img src="{{ asset($data->aboutimage) }}" alt="My-Image"
-                        style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                        style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
             <div class="col-md-9 mb-4 mb-md-0">
