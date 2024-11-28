@@ -10,7 +10,14 @@
             </p>
         </div>
         <div class="row align-items-center mb-5">
-            <div class="col-md-6 mb-4 mb-md-0">
+
+            <div class="col-md-3 text-center">
+                <div class="about-img">
+                    <img src="{{ asset($data->aboutimage) }}" alt="My-Image"
+                        style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+            <div class="col-md-9 mb-4 mb-md-0">
                 <div class="p-4 mb-2 bg-white shadow rounded">
                     <h2 class="fw-bold" style="color: #6C63FF;">Biography</h2>
                     <p style="line-height: 1.6; font-size: 1rem; text-align: justify;" class="text-muted">
@@ -43,12 +50,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 text-center">
-                <div class="about-img">
-                    <img src="{{ asset($data->aboutimage) }}" alt="My-Image"
-                        style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
