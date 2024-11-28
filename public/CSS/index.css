@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -171,56 +171,139 @@ body .about-section .skills li .fa-check-circle {
   color: #FF8976;
 }
 body .social-media {
-  padding: 40px 80px 40px 70px;
+  background-color: white;
+  padding: 40px 0;
 }
-body .social-media #section-heading {
-  font-size: 40px;
-  padding: 10px 5px 40px 5px;
-  text-align: center;
+body .social-media a {
+  text-decoration: none;
+  color: inherit;
 }
-body .social-media .card {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 10px;
+body .social-media .text-center {
+  margin-bottom: 2rem;
 }
-body .social-media .card .card-img-top {
-  background-color: #D4C3C2;
-  border-radius: 10px;
-  width: 100%;
-  padding: 10px 70px 10px 70px;
+body .social-media .text-center h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
 }
-body .social-media .card .card-body {
+body .social-media .text-center p {
+  font-size: 1.2rem;
+  color: #777;
+}
+body .social-media .col-md-3 {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-body .social-media .card .card-body .card-title {
-  padding: 0px;
-  margin: 5px;
+body .social-media .col-md-3 div h2 {
+  font-size: 2rem;
+  color: #6C63FF;
+  margin-bottom: 1.5rem;
+}
+body .social-media .col-md-3 div p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+body .social-media .col-md-3 div .btn {
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #6C63FF;
+  color: white;
   text-align: center;
+  pointer-events: none;
 }
-body .social-media .card .card-body .card-title span {
-  padding: 5px;
-  color: #FF8976;
+body .social-media .col-md-3 div .btn:hover {
+  background-color: #5a53e4;
+  color: white;
 }
-body .social-media .card .card-body .card-text {
-  font-size: 15px;
-  padding: 0px;
-  margin: 5px 5px 10px 5px;
-  text-align: center;
-}
-body .social-media .card .card-body .btn {
-  background-color: #E7F5FE;
-  border: 2px solid black;
-  padding: 5px 20px 5px 20px;
+body .social-media .col-md-9 .row .col-6 .custom-card {
+  border: none;
+  background: #fff;
   border-radius: 20px;
-  cursor: pointer;
-  color: #FF8976;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-body .social-media .card .card-body .btn:hover {
-  background-color: #FF8976;
-  color: #E7F5FE;
+body .social-media .col-md-9 .row .col-6 .custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body {
+  text-align: center;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .platform-icon {
+  width: 80px;
+  height: 80px;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .platform-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-danger {
+  border: 2px solid #ff4a4a;
+  color: #ff4a4a;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-danger:hover {
+  background-color: #ff4a4a;
+  color: white;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-primary {
+  border: 2px solid #0056b3;
+  color: #0056b3;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-primary:hover {
+  background-color: #0056b3;
+  color: white;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-info {
+  border: 2px solid black;
+  color: black;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-info:hover {
+  background-color: black;
+  color: white;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-secondary {
+  border: 2px solid #0077b5;
+  color: #0077b5;
+}
+body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outline-secondary:hover {
+  background-color: #0077b5;
+  color: white;
+}
+@media (max-width: 767px) {
+  body .social-media .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  body .social-media .row {
+    flex-direction: row;
+  }
+  body .col-md-3,
+  body .col-md-9 {
+    width: 100%;
+    text-align: center;
+  }
+  body .platform-title {
+    font-size: 1.2rem;
+  }
+  body .platform-icon {
+    width: 60px;
+    height: 60px;
+  }
+  body .custom-card {
+    margin-bottom: 15px;
+  }
+  body .col-6 {
+    width: 50%; /* This ensures two cards per row */
+  }
 }
 body .posts h1 {
   text-align: center;
@@ -362,47 +445,6 @@ body footer #arrow {
   .about-section {
     margin-top: 150px;
     padding: 10px 30px 10px 30px !important;
-  }
-  .social-media {
-    padding: 40px 80px 60px 120px !important;
-  }
-  .social-media #section-heading {
-    font-size: 40px;
-    text-align: center;
-  }
-  .social-media .card {
-    width: 80% !important;
-  }
-  .social-media .card .card-img-top {
-    width: 100% !important;
-  }
-  .social-media .card .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .social-media .card .card-body .card-title {
-    padding: 0px;
-    margin: 5px;
-    text-align: center;
-  }
-  .social-media .card .card-body .card-title span {
-    padding: 5px;
-    color: #FF8976;
-  }
-  .social-media .card .card-body .card-text {
-    font-size: 15px;
-    padding: 0px;
-    margin: 5px 5px 10px 5px;
-    text-align: center;
-  }
-  .social-media .card .card-body .btn {
-    background-color: #E7F5FE;
-    border: 2px solid black;
-    padding: 5px 20px 5px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #FF8976;
   }
   .posts {
     padding: 10px 50px 10px 50px;
@@ -572,17 +614,6 @@ body footer #arrow {
   }
   .about-section {
     padding: 10px 30px 10px 30px !important;
-  }
-  .social-media {
-    background-color: #E7F5FE;
-    padding: 10px 20px 20px 20px !important;
-  }
-  .social-media #section-heading {
-    padding: 30px 0px 30px 0px !important;
-  }
-  .social-media .card {
-    margin-left: 70px !important;
-    width: 60% !important;
   }
 }
 /* Admin Panel Custom CSS for sidebar */
