@@ -7,34 +7,16 @@
         <div class="row align-items-center">
             <!-- Text Content -->
             <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-xs-12 order-1 order-md-0">
-                <div class="text-content">
+                <div class="text-content" style="align-">
                     <h1 id="heading" class="display-4 fw-bold" style="color: #222;">
                         {!! $data->title !!}
                     </h1>
-                    <p style="font-size: 1.2rem; color: #666; line-height: 1.8;">
+                    <p  style="font-size: 1.2rem; color: #666; line-height: 1.8; text-align: justify;">
                         {!! $data->paragraph1 !!}
                     </p>
-                    <p style="font-size: 1.2rem; color: #666; line-height: 1.8;">
+                    <p style="font-size: 1.2rem; color: #666; line-height: 1.8; text-align: justify;">
                         {!! $data->paragraph2 !!}
                     </p>
-                    {{-- <a href="#" class="btn btn-success btn-lg mt-3" style="border-radius: 30px;">
-                        {!! $data->button_text !!}
-                    </a> --}}
-                    <!-- Statistics -->
-                    <div class="d-flex mt-4 gap-4 stats-container">
-                        <div>
-                            <h3 class="fw-bold" style="color: #6C63FF;">100M</h3>
-                            <p class="text-muted">YouTube Views</p>
-                        </div>
-                        <div>
-                            <h3 class="fw-bold" style="color: #FF7A59;">5M</h3>
-                            <p class="text-muted">Subscribers</p>
-                        </div>
-                        <div>
-                            <h3 class="fw-bold" style="color: #1DA1F2;">8M</h3>
-                            <p class="text-muted">Followers</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 

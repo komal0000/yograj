@@ -24,7 +24,7 @@
         margin: 0.5rem 0;
     }
 
-    .btn-outline-danger, .btn-outline-primary, .btn-outline-info {
+    .btn-outline-danger, .btn-outline-primary, .btn-outline-info, .btn-outline-secondary {
         font-size: 0.9rem;
         border-radius: 30px;
         padding: 0.5rem 1.5rem;
@@ -43,6 +43,11 @@
 
     .btn-outline-info:hover {
         background-color: #1c8ef1;
+        color: #fff;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: #0077b5;
         color: #fff;
     }
 
@@ -72,10 +77,15 @@
     }
 
     .twitter-card {
-        border-top: 5px solid #1da1f2;
+        border-top: 5px solid #000000;
+    }
+
+    .linkedin-card {
+        border-top: 5px solid #0077b5;
     }
 </style>
-<section class="social-media  py-5">
+
+<section class="social-media py-5">
     <div class="container">
         <!-- Section Heading -->
         <div class="text-center mb-5">
@@ -86,7 +96,7 @@
         </div>
 
         <!-- Unique Layout -->
-        <div class="row ">
+        <div class="row">
             <!-- Left Block -->
             <div class="col-md-3 d-flex align-items-center">
                 <div>
@@ -102,49 +112,56 @@
             <div class="col-md-9">
                 <div class="row">
                     <!-- YouTube Card -->
-                    <div class="col-md-3">
+                    <div class="col-6">
                         <div class="card custom-card youtube-card">
                             <div class="card-body text-center">
                                 <img src="Images/youtube.png" alt="YouTube" class="platform-icon">
                                 <h5 class="platform-title mt-3">YouTube</h5>
-                                <p class="follower-count">780<span>k</span> Subscribers</p>
-                                <a href="#" class="btn btn-outline-danger">Subscribe</a>
+                                <a target="_blank" href="#" class="btn btn-outline-danger">Subscribe</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Facebook Card -->
-                    <div class="col-md-3">
+                    <div class="col-6">
                         <div class="card custom-card facebook-card">
                             <div class="card-body text-center">
                                 <img src="Images/facebook.png" alt="Facebook" class="platform-icon">
                                 <h5 class="platform-title mt-3">Facebook</h5>
-                                <p class="follower-count">1.2<span>M</span> Followers</p>
-                                <a href="#" class="btn btn-outline-primary">Follow</a>
+                                <a target="_blank" href="https://www.facebook.com/yogarajdahal01?mibextid=ZbWKwL" class="btn btn-outline-primary">Follow</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Instagram Card -->
-                    <div class="col-md-3">
+                    <div class="col-6">
                         <div class="card custom-card instagram-card">
                             <div class="card-body text-center">
                                 <img src="Images/instagram.png" alt="Instagram" class="platform-icon">
                                 <h5 class="platform-title mt-3">Instagram</h5>
-                                <p class="follower-count">2.5<span>M</span> Followers</p>
-                                <a href="#" class="btn btn-outline-danger">Follow</a>
+                                <a target="_blank" href="https://www.instagram.com/yogarajdahal02/profilecard/?igsh=MWI0M3BrbXVmd3NkNw%3D%3D" class="btn btn-outline-danger">Follow</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Twitter Card -->
-                    <div class="col-md-3">
+                    <div class="col-6">
                         <div class="card custom-card twitter-card">
                             <div class="card-body text-center">
-                                <img src="Images/twitter.png" alt="Twitter" class="platform-icon">
+                                <img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.jpg" alt="Twitter" class="platform-icon">
                                 <h5 class="platform-title mt-3">Twitter</h5>
-                                <p class="follower-count">780<span>k</span> Followers</p>
-                                <a href="#" class="btn btn-outline-info">Follow</a>
+                                <a target="_blank" href="https://x.com/Yogarajdahal326?t=7KVb4zxfSjS-MGHkKb_ppA&s=09" class="btn btn-outline-info">Follow</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn Card -->
+                    <div class="col-6">
+                        <div class="card custom-card linkedin-card">
+                            <div class="card-body text-center">
+                                <img src="Images/li.png" alt="LinkedIn" class="platform-icon">
+                                <h5 class="platform-title mt-3">LinkedIn</h5>
+                                <a target="_blank" href="https://www.linkedin.com/in/yogarajdahal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-outline-secondary">Connect</a>
                             </div>
                         </div>
                     </div>

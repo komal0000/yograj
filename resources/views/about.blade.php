@@ -13,7 +13,7 @@
             <div class="col-md-6 mb-4 mb-md-0">
                 <div class="p-4 mb-2 bg-white shadow rounded">
                     <h2 class="fw-bold" style="color: #6C63FF;">Biography</h2>
-                    <p style="line-height: 1.6; font-size: 1rem;" class="text-muted">
+                    <p style="line-height: 1.6; font-size: 1rem; text-align: justify;" class="text-muted">
                         {!! $data->biography !!}
                     </p>
                 </div>

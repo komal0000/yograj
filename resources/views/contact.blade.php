@@ -28,6 +28,15 @@
                             </span>
                         </div>
                         <div class="form-group mt-2">
+                            <label for="phone">Pnone Number</label>
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" value="{{old('phone')}}">
+                            <span class="text-danger">
+                                @error('phone')
+                                {{$message}}
+                                @enderror
+                            </span>
+                        </div>
+                        <div class="form-group mt-2">
                             <label for="message">Message:</label>
                             <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
                             <span class="text-danger">
