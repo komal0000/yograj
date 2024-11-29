@@ -17,19 +17,14 @@ body {
             padding: 0;
 
             .container-fluid {
+                display: flex;
+                justify-content: space-between;
                 background-color: #252729;
-                padding: 10px;
-                color: white;
-
-
-
-                .logo h1 {
+                h1 {
                     font-size: 40px;
                     font-weight: bolder;
                     padding: 25px 10px 10px 5px;
                     margin: 0px 0px 0px 60px;
-                    color: white;
-
                 }
 
                 .navbar-nav {
@@ -393,7 +388,11 @@ body {
             flex-direction: row;
         }
 
-        .col-md-3,
+        .col-md-3{
+            .left{
+                display: none;
+            }
+        }
         .col-md-9 {
             width: 100%;
             text-align: center;

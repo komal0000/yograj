@@ -7,7 +7,7 @@
     <title>@yield('title', 'Admin Dashboard')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/css/dropify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('CSS/index.css') }}">
 
     @yield('css')
@@ -18,6 +18,7 @@
             min-height: 100vh;
             padding-top: 20px;
         }
+
         .sidebar ul {
             padding-left: 0;
         }
@@ -37,7 +38,8 @@
         .sidebar ul li a:hover {
             background-color: #495057;
         }
-        .sidebar ul li a i{
+
+        .sidebar ul li a i {
             margin-right: 6px;
         }
 
@@ -45,6 +47,12 @@
             text-decoration: none;
             color: #575A5E;
             font-weight: 700;
+        }
+
+        /* Make the Dropify text smaller */
+        .dropify-wrapper .dropify-message p {
+            font-size: 12px;
+            /* Adjust the size to your preference */
         }
     </style>
 </head>
@@ -75,12 +83,11 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/js/dropify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.dropify').dropify();
         });
     </script>

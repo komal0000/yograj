@@ -72,7 +72,34 @@ class SettingController extends Controller
         }
     }
 
+    public function general(Request $request){
+        if($request->isMethod('GET')){
+            $data = Helper::getGeneralSetting();
+            return view('admin.settings.general',compact('data'));
+        }else{
+            $head = $request->head ?? '';
+            Helper::setSetting('head_text', $head);
+            return redirect()->back();
+        }
+    }
 
+    public function meta(Request $request)
+    {
+        if($request->isMethod('GET')){
+            $data = Helper::getMetaSetting();
+            return view('admin.settings.meta',compact('data'));
+        }else{
+            $metaTitle = $request->meta_image ?? '';
+            $metaDescription = $request->meta_description ?? '';
+            if ($request->hasFile('meta_image')) {
+                $imagePath = $request->file('meta_image')->store('meta_images');
+                Helper::setSetting('meta_image', $imagePath);
+            }
+            Helper::setSetting('meta_title',$metaTitle);
+            Helper::setSetting('meta_description',$metaDescription);
+            return redirect()->back();
+        }
+    }
     public function footer(Request $request)
     {
         if ($request->isMethod('GET')) {

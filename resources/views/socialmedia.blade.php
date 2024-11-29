@@ -12,7 +12,7 @@
         <div class="row">
             <!-- Left Block -->
             <div class="col-md-3 d-flex align-items-center">
-                <div>
+                <div class="left">
                     <h2 class="mb-4" style="font-size: 2rem; color: #6C63FF;">Connect with Me</h2>
                     <p class="text-muted mb-4" style="font-size: 1.1rem; text-align: left">
                         Discover the stories, tips, and conversations that inspire and engage my audience across

@@ -12,16 +12,15 @@ body header .navbar {
   padding: 0;
 }
 body header .navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
   background-color: #252729;
-  padding: 10px;
-  color: white;
 }
-body header .navbar .container-fluid .logo h1 {
+body header .navbar .container-fluid h1 {
   font-size: 40px;
   font-weight: bolder;
   padding: 25px 10px 10px 5px;
   margin: 0px 0px 0px 60px;
-  color: white;
 }
 body header .navbar .container-fluid .navbar-nav {
   padding: 0px 10px 0px 200px;
@@ -283,7 +282,9 @@ body .social-media .col-md-9 .row .col-6 .custom-card .card-body .btn.btn-outlin
   body .social-media .row {
     flex-direction: row;
   }
-  body .col-md-3,
+  body .col-md-3 .left {
+    display: none;
+  }
   body .col-md-9 {
     width: 100%;
     text-align: center;

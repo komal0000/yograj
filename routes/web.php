@@ -53,6 +53,8 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
         Route::match(['GET', 'POST'], '/home', [SettingController::class, 'homepage'])->name('homepage');
         Route::match(['GET', 'POST'], '/about', [SettingController::class, 'aboutpage'])->name('aboutpage');
         Route::match(['GET', 'POST'], '/footer', [SettingController::class, 'footer'])->name('footer');
+        Route::match(['GET','POST'],'general',[SettingController::class,'general'])->name('general');
+        Route::match(['GET','POST'],'meta',[SettingController::class,'meta'])->name('meta');
     });
 });
 
