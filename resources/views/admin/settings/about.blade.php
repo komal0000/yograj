@@ -58,8 +58,13 @@
         </form>
     </div>
 
+    <!-- include summernote css/js -->
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            $('#biographyTextarea').summernote();
+
             const addSkillBtn = document.getElementById("addSkillBtn");
             const skillsContainer = document.getElementById("skillsContainer");
 

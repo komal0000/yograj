@@ -1,4 +1,4 @@
-<div class="main py-5">
+<div class="main">
     @php
         $data = App\Helper::getHomeSetting();
     @endphp
@@ -22,7 +22,7 @@
 
             <!-- Image Content -->
             <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-xs-12 order-0 order-md-1 p-0">
-                <div class="image-content text-center">
+                <div class="image-content text-center mb-3">
                     <img src="{{ asset($data->image) }}" alt="Portfolio Image" class="img-fluid rounded"
                         style="max-width: 55%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                 </div>

@@ -1,4 +1,4 @@
-<section class="social-media py-5">
+<section class="social-media ">
     <div class="container">
         <!-- Section Heading -->
         <div class="text-center mb-5">

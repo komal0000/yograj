@@ -393,10 +393,7 @@ body {
                 display: none;
             }
         }
-        .col-md-9 {
-            width: 100%;
-            text-align: center;
-        }
+
 
         .platform-title {
             font-size: 1.2rem;
@@ -668,7 +665,7 @@ $breakpoint-tablet: 768px;
 
     .about-section {
         margin-top: 150px;
-        padding: 10px 30px 10px 30px !important;
+        padding: 10px  !important;
 
 
 
@@ -876,7 +873,6 @@ $breakpoint-tablet: 768px;
 
 $breakpoint-phone: 576px;
 @media (max-width: $breakpoint-phone) {
-
     .navbar {
         padding: 0;
 
@@ -919,18 +915,6 @@ $breakpoint-phone: 576px;
                     }
                 }
             }
-
-
-            .contact {
-                margin-left: 35% !important;
-                margin-top: 20px !important;
-            }
-
-            .contact:hover {
-                background-color: #FF8976;
-                color: white;
-
-            }
         }
 
         .main {
@@ -967,7 +951,7 @@ $breakpoint-phone: 576px;
 
     .about-section {
 
-        padding: 10px 30px 10px 30px !important;
+        padding: 10px  !important;
     }
 
 }

@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-6 mb-2">
                 <label for="head">Heading text</label>
-                <input class="form-control" type="text" name="head" id="head" value="{{ $data->head}}">
+                <textarea class="form-control" type="text" name="head" id="head">{!! $data->head !!}</textarea>
             </div>
         </div>
         <button class="btn btn-primary mt-3">Save</button>

@@ -22,5 +22,7 @@
     <section id="social-media-section">
         @include('socialmedia')
     </section>
-
+    <section id="copntact-section">
+        @include('contact')
+    </section>
 @endsection

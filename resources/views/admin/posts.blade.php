@@ -43,7 +43,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fab fa-facebook"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" name="facebook_url"
+                                    <input type="url" class="form-control" name="facebook_url"
                                         placeholder="Facebook URL">
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fab fa-instagram"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" name="instagram_url"
+                                    <input type="url" class="form-control" name="instagram_url"
                                         placeholder="Instagram URL">
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fab fa-linkedin"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" name="linkedin_url"
+                                    <input type="url" class="form-control" name="linkedin_url"
                                         placeholder="LinkedIn URL">
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-twitter"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" name="twitter_url" placeholder="Twitter URL">
+                                    <input type="url" class="form-control" name="twitter_url" placeholder="Twitter URL">
                                 </div>
                             </div>
                         </div>
