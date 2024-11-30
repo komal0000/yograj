@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
-
-
+use App\Models\PostCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -41,6 +42,14 @@ class PostController extends Controller
         $post->linkedin_url = $request->linkedin_url??"";
         $post->twitter_url = $request->twitter_url??"";
         $post->save();
+        if ($request->has('category_ids')) {
+            foreach ($request->category_ids as $categoryId) {
+                $postCategory = new PostCategory();
+                $postCategory->post_id = $post->id;
+                $postCategory->category_id = $categoryId;
+                $postCategory->save();
+            }
+        }
 
         return redirect()->route('admin.posts.index')->with('success', 'Post created successfully.');
     }
@@ -52,8 +61,9 @@ class PostController extends Controller
         // Retrieve all posts from the database
         $posts = Post::all();
 
-        // Pass the posts to the view
-        return view('admin.posts', compact('posts'));
+        $categories = DB::table('categories')->get();
+
+        return view('admin.posts', compact('posts','categories'));
     }
 
     public function blogview()
@@ -107,7 +117,6 @@ class PostController extends Controller
         $post->twitter_url = $request->twitter_url;
 
         $post->save();
-
         return redirect()->route('admin.posts.index')->with('success', 'Post updated successfully.');
     }
 
@@ -128,5 +137,30 @@ class PostController extends Controller
         return redirect()->route('admin.posts.index')->with('success', 'Post deleted successfully.');
     }
 
+    public function categoryindex(Request $request)
+    {
+        if ($request->isMethod('GET')) {
+            $categories = DB::table('categories')->get();
+            return view('admin.postcategory',compact('categories'));
+        } else {
+            $validated = $request->validate([
+                'title' => 'required|max:255',
+            ]);
+
+            $category = new Category();
+            $category->title = $request->title;
+            $category->save();
+
+            return redirect()->back();
+        }
+    }
+
+    public function categorydestory($id)
+    {
+
+        $category = Category::where('id', $id)->first();
+        $category->delete();
+        return redirect()->back();
+    }
 
 }
