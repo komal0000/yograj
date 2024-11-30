@@ -89,7 +89,7 @@ class SettingController extends Controller
             $data = Helper::getMetaSetting();
             return view('admin.settings.meta',compact('data'));
         }else{
-            $metaTitle = $request->meta_image ?? '';
+            $metaTitle = $request->meta_title ?? '';
             $metaDescription = $request->meta_description ?? '';
             if ($request->hasFile('meta_image')) {
                 $imagePath = $request->file('meta_image')->store('meta_images');

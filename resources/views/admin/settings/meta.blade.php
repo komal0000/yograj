@@ -19,8 +19,7 @@
             </div>
             <div class="col-md-6 mb-2">
                 <label for="meta_image">Upload image</label>
-                <input class="form-control dropify" type="file" name="meta_image" id="meta_image">
-                {!! $data->meta_image !!}
+                <input class="form-control dropify" type="file" name="meta_image" id="meta_image" data-default-file="{{asset($data->meta_image)}}">
             </div>
         </div>
         <button class="btn btn-primary mt-3">Save</button>
