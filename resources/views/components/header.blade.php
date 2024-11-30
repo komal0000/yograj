@@ -2,7 +2,7 @@
     @php
         $data = App\Helper::getGeneralSetting();
     @endphp
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo aligned to the left -->
             <a class="navbar-brand" href="{{ route('main') }}">

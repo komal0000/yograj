@@ -27,15 +27,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 mb-2">
-                <label for="button_text">Button Text:</label>
-                <input class="form-control" type="text" name="button_text" id="button_text"
-                    value="{{ $data->button_text }}">
-            </div>
-            <div class="col-md-6 mb-2">
+            <div class="col-md-4 mb-2">
                 <label for="image">Upload Image:</label>
-                <input class="form-control" type="file" name="image" id="image">
-                {!! $data->image !!}
+                <input class="form-control dropify" type="file" name="image" id="image" data-default-file="{{asset($data->image)}}">
             </div>
         </div>
         <button class="btn btn-primary mt-3">Save</button>
