@@ -10,29 +10,15 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-
-
-
     public function store(Request $request)
     {
-        // Validate the form data
-        $request->validate([
-            'title' => 'required|max:255',
-            'content' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image file types and size
-
-
-        ]);
-
-        // Handle file upload
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $imageName); // Move uploaded file to public/images directory
+            $image->move(public_path('images'), $imageName);
         } else {
             $imageName = null;
         }
-
         $post = new Post();
         $post->title = $request->title;
         $post->content = $request->content;
@@ -50,26 +36,19 @@ class PostController extends Controller
                 $postCategory->save();
             }
         }
-
-        return redirect()->route('admin.posts.index')->with('success', 'Post created successfully.');
+        return redirect()->back();
     }
-
-
 
     public function index()
     {
-        // Retrieve all posts from the database
         $posts = Post::all();
-
         $categories = DB::table('categories')->get();
-
         return view('admin.posts', compact('posts','categories'));
     }
 
     public function blogview()
     {
         $posts = Post::all();
-
         return view('blog', compact('posts'));
     }
     public function postdetail($id)
@@ -85,7 +64,10 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('admin.postedit', compact('post'));
+        $postcategories = PostCategory::where('post_id',$id)->get();
+        $categories = Category::all();
+        // dd($postcategories);
+        return view('admin.postedit', compact('post','categories','postcategories'));
     }
 
     public function update(Request $request, $id)
@@ -115,8 +97,15 @@ class PostController extends Controller
         $post->instagram_url = $request->instagram_url;
         $post->linkedin_url = $request->linkedin_url;
         $post->twitter_url = $request->twitter_url;
-
         $post->save();
+        if ($request->has('category_ids')) {
+            foreach ($request->category_ids as $categoryId) {
+                $postCategory = new PostCategory();
+                $postCategory->post_id = $post->id;
+                $postCategory->category_id = $categoryId;
+                $postCategory->save();
+            }
+        }
         return redirect()->route('admin.posts.index')->with('success', 'Post updated successfully.');
     }
 

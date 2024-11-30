@@ -42,7 +42,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     // Post Management Routes
     Route::prefix('posts')->name('posts.')->group(function () {
         Route::get('', [PostController::class, 'index'])->name('index');
-        Route::get('/create', [PostController::class, 'create'])->name('create');
         Route::post('', [PostController::class, 'store'])->name('store');
         Route::get('edit/{id}/edit', [PostController::class, 'edit'])->name('edit');
         Route::put('update/{id}', [PostController::class, 'update'])->name('update');

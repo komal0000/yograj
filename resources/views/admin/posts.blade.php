@@ -35,7 +35,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Social Media Links -->
                     <div class="form-group">
                         <label>Social Media Links</label>
                         <div class="row">
