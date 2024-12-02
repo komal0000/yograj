@@ -51,6 +51,15 @@
                         <input type="text" class="form-control" name="twitter_link" placeholder="twitter link" value="{{ $data->twitter_link ?? '' }}">
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fab fa-youtube"></i></span>
+                        </div>
+                        <input type="text" class="form-control" name="youtube_link" placeholder="YouTube link" value="{{ $data->youtube_link ?? '' }}">
+                    </div>
+                </div>
+
             </div>
         </div>
 

@@ -113,16 +113,11 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
-
-        // Check if post exists
         if (!$post) {
             return redirect()->route('admin.posts.index')->with('error', 'Post not found.');
         }
-
-        // Delete the post
+        PostCategory::where("post_id",$post->id)->delete();
         $post->delete();
-
-        // Flash a success message
         return redirect()->route('admin.posts.index')->with('success', 'Post deleted successfully.');
     }
 
