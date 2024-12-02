@@ -1,4 +1,4 @@
-<div class="sidebar" id="sidebar">
+<div class="sidebar d-none d-md-block" id="sidebar">
     <h2>{{strtoupper(Auth::user()->name)}}</h2>
     <ul>
         <li><a href="{{ route('admin.posts.index') }}"><i class="fas fa-edit"></i>Posts</a></li>

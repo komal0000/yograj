@@ -13,7 +13,7 @@ class LoginController extends Controller
 
         if($request->getMethod()=="POST"){
             if(Auth::attempt(['email'=>$request->email,'password'=>$request->password],false)){
-                return redirect()->route('admin.msg');
+                return redirect()->route('admin.index');
             }else{
                 return redirect()->back()->with('error','Invalid Credentials');
             }

@@ -27,12 +27,12 @@ Route::get('/contactme', [ContactController::class, 'contactme']);
 Route::post('/sendmsg', [ContactController::class, 'sendmsg']);
 
 Route::match(['GET', 'POST'], '/login', [LoginController::class, 'login'])->name('login');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::match(['GET', 'POST'],'/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 
     // Admin Dashboard
-    Route::get('/', [Controller::class, 'index'])->name('index');
+    Route::view("",'admin.index')->name('index');
 
     // Contact Messages Management
     Route::get('/msg', [ContactController::class, 'msg'])->name('msg');
